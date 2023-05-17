@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Cake from "./Cake.js";
+import CakeForm from "./CakeForm.js";
 
 const CakeContainer = () => {
 
@@ -49,12 +50,14 @@ const CakeContainer = () => {
 
   return (
     <>
-		<h2>BNTA Bakery:</h2>
-		<Cake cake = {listOfCakes[0]} />
-        <Cake cake = {listOfCakes[1]}/>
-        <Cake cake = {listOfCakes[2]}/>
+		<h2>BNTA Bakery Items:</h2>
+		<Cake info = {listOfCakes[0]} setInfo = {setListOfCakes[0]} />
+        <Cake info = {listOfCakes[1]} setInfo = {setListOfCakes[1]}/>
+        <Cake info = {listOfCakes[2]} setInfo = {setListOfCakes[2]}/>
+
+		<CakeForm />
     </>
-)
+);
 }
 
 export default CakeContainer;

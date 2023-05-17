@@ -1,7 +1,7 @@
-const Cake = ({cake}) => {
+const Cake = ({info}) => {
 
 
-  const newIngredientsList = cake.ingredients.map((ingredients) => {
+  const newIngredientsList = info.ingredients.map((ingredients) => {
     return <li>{ingredients}</li>
   });
 
@@ -10,8 +10,8 @@ const Cake = ({cake}) => {
     <>
     {/* PROPS */}
 
-        <h2>{cake.cakeName}</h2>
-        <p>Rating: {cake.rating}</p>
+        <h2>{info.cakeName}</h2>
+        <p>This cake has an average rating of {info.rating}. </p>
         {/* The rest of the elements for the first MVP bullet point: */}
         {/* <p>Name: {cake.cakeName}</p> */}
         {/* <p>Ingredients: {cake.ingredients.join(", ")}</p> */}
@@ -19,7 +19,7 @@ const Cake = ({cake}) => {
 
         {/* Third bullet point in the MVP:  */}
         
-        <p>Ingredients list:</p>
+        <p> Ingredients list for a {info.cakeName}: </p>
         <ul> {newIngredientsList}</ul>
           {/* <ul>{cake.ingredients}</ul> */}
 
